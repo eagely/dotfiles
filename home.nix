@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = builtins.map (file: ./modules/${file}) (builtins.filter(file: builtins.match ".*\\.nix$" file != null) (builtins.attrNames (builtins.readDir ./modules)));
+  imports = builtins.map (file: ./homeModules/${file}) (builtins.filter(file: builtins.match ".*\\.nix$" file != null) (builtins.attrNames (builtins.readDir ./homeModules)));
 
   home.username = "eagely";
   home.homeDirectory = "/home/eagely";
@@ -9,6 +9,7 @@
   home.stateVersion = "25.05";
 
   home.file = {
+  "wallpaper.png".source = ./homeModules/wallpapers/wallpaper.png;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
