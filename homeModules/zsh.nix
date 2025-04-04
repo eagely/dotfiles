@@ -8,5 +8,8 @@
         homecfg = "vim ~/dotfiles/home.nix && rebuild";
         syscfg = "vim ~/dotfiles/configuration.nix && rebuild";
       };
+      initExtra = "
+        bindkey -e
+      ";
     };
 }
