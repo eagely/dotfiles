@@ -19,7 +19,19 @@
         window = {
           titlebar = false;
         };
-        output."*".bg = "${config.home.file."wallpaper.png".source} fill";
+        output = {
+          "*" = {
+            bg = "${config.home.file."wallpaper.png".source} fill";
+          };
+          "eDP-1" = {
+            disable = "";
+          };
+          "DP-1" = {
+            enable = "";
+            resolution = "2560x1440";
+            position = "0,0";
+          };
+        };
         keybindings =
           let
               super = "Mod4";
