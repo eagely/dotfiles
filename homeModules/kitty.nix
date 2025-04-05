@@ -2,8 +2,18 @@
   programs = {
     kitty = {
       enable = true;
+      themeFile = "Catppuccin-Mocha";
       settings = {
-        background_opacity = "0.8";
+        dynamic_background_opacity = "yes";
+        background_opacity = 0.6;
+        background_blur = 1;
+        cursor_trail = 3;
+        cursor_trail_decay = "0.05 0.2";
+        confirm_os_window_close = 0;
+      };
+      font = {
+        name = "Maple Mono";
+        size = 20;
       };
     };
   };
