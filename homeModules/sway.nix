@@ -11,6 +11,14 @@
           names = [ "Maple Mono" ];
           size = 14.0;
         };
+        gaps = {
+          smartBorders = "on";
+          smartGaps = true;
+          inner = 10;
+        };
+        window = {
+          titlebar = false;
+        };
         output."*".bg = "${config.home.file."wallpaper.png".source} fill";
         keybindings =
           let

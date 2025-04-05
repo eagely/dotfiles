@@ -89,6 +89,7 @@
       floorp
       home-manager
       nh
+      zoxide
     ];
   };
 
