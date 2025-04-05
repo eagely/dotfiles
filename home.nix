@@ -9,7 +9,8 @@
   home.stateVersion = "25.05";
 
   home.file = {
-  "wallpaper.png".source = ./homeModules/wallpapers/wallpaper.png;
+  "assets/wallpapers/wallpaper.png".source = ./homeModules/assets/wallpapers/wallpaper.png;
+  "assets/themes/wofi/mocha.css".source = ./homeModules/assets/themes/wofi/mocha.css;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

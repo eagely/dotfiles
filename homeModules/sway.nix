@@ -21,7 +21,7 @@
         };
         output = {
           "*" = {
-            bg = "${config.home.file."wallpaper.png".source} fill";
+            bg = "${config.home.file."assets/wallpapers/wallpaper.png".source} fill";
           };
           "eDP-1" = {
             disable = "";
@@ -37,6 +37,7 @@
               super = "Mod4";
               hyper = "Mod4+Shift";
           in {
+            "Print" = "exec sh -c 'grim -g \"$(slurp)\" - | wl-copy'";
             "${super}+0" = "workspace number 10";
             "${super}+1" = "workspace number 1";
             "${super}+2" = "workspace number 2";

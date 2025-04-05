@@ -11,5 +11,10 @@
       initExtra = "
         bindkey -e
       ";
+
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "git" "thefuck" ];
+      };
     };
 }
