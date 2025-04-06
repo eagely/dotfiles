@@ -4,20 +4,33 @@
   imports =
     [
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.home-manager
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      eagely = import ./home.nix;
-    };
-  };
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  systemd.user.services.xdg-desktop-portal = {
+    enable = true;
+    description = "Desktop portal service";
+  };
+
+  systemd.user.services.xdg-desktop-portal-kde = {
+    enable = true;
+    description = "Wayland desktop portal service";
+  };
+
+  xdg.portal = {
+    enable = true;
+    config.common.default = "kde";
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+    ];
+    configPackages = [
+      pkgs.xdg-desktop-portal-wlr
+    ];
+  };
 
   security = {
     polkit.enable = true;
@@ -82,6 +95,11 @@
   nixpkgs.config.allowUnfree = true;
 
   environment = {
+    variables = {
+      XDG_SESSION_TYPE = "wayland";
+      XDG_CURRENT_DESKTOP = "sway";
+    };
+
     sessionVariables = {
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       WRL_NO_HARDWARE_CURSORS = "1";
@@ -118,7 +136,7 @@
       home-manager
       nh
       zoxide
-      discord
+      vesktop
       pipewire
       pavucontrol
       pulseaudio
@@ -128,6 +146,9 @@
       prismlauncher
       steam
       wofi
+      xdg-desktop-portal
+      xdg-desktop-portal-wlr
+      kdePackages.xwaylandvideobridge
     ];
   };
 

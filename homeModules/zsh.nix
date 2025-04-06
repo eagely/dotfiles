@@ -4,9 +4,10 @@
       shellAliases = {
         ll = "ls -l";
         ".." = "cd ..";
-        rebuild = "nh os switch";
-        homecfg = "vim ~/dotfiles/home.nix && rebuild";
-        syscfg = "vim ~/dotfiles/configuration.nix && rebuild";
+        os = "nh os switch";
+        hs = "nh home switch";
+        h = "vim ~/dotfiles/home.nix && hs";
+        s = "vim ~/dotfiles/configuration.nix && os";
       };
       initExtra = "
         bindkey -e
