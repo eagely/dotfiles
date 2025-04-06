@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
@@ -19,13 +24,13 @@
         nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs system; };
 
-          modules = [ ./configuration.nix ];
+          modules = [ ./nixos/configuration.nix ];
         };
       };
 
       homeConfigurations.eagely = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ ./home-manager/home.nix ];
         extraSpecialArgs = { inherit inputs system; };
       };
     };

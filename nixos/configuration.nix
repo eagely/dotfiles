@@ -148,6 +148,8 @@
       xdg-desktop-portal
       xdg-desktop-portal-wlr
       kdePackages.xwaylandvideobridge
+      kdePackages.kdenlive
+      vlc
     ];
   };
 
