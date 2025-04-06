@@ -6,7 +6,6 @@
     shellAliases = {
       ll = "ls -l";
       ".." = "cd ..";
-      vim = "nvim";
       os = "nh os switch";
       hs = "nh home switch";
       h = "vim ~/dotfiles/home.nix && hs";
@@ -17,7 +16,7 @@
     '';
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "thefuck" ];
+      plugins = [ "git" ];
     };
   };
 }
