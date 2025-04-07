@@ -22,12 +22,17 @@
 
   xdg.portal = {
     enable = true;
-    config.common.default = "kde";
+    xdgOpenUsePortal = true;
+    config.common.default = ["*"];
     extraPortals = [
       pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
     ];
     configPackages = [
       pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
     ];
   };
 
@@ -93,6 +98,12 @@
 
   nixpkgs.config.allowUnfree = true;
 
+	hardware.nvidia.prime = {
+    sync.enable = true;
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+	};
+
   environment = {
     variables = {
       XDG_SESSION_TYPE = "wayland";
@@ -103,6 +114,9 @@
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       WRL_NO_HARDWARE_CURSORS = "1";
       WRL_RENDERER_ALLOW_SOFTWARE = "1";
+      __NV_PRIME_RENDER_OFFLOAD="1";
+      __NV_PRIME_RENDER_OFFLOAD_PROVIDER="NVIDIA-G0";
+      __VK_LAYER_NV_optimus="NVIDIA_only";
       EDITOR = "vim";
       FLAKE="/home/eagely/dotfiles";
     };
@@ -149,10 +163,12 @@
       xdg-desktop-portal-wlr
       kdePackages.xwaylandvideobridge
       kdePackages.kdenlive
+      kdePackages.okular
       vlc
+      brightnessctl
+      geogebra
     ];
   };
-
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
@@ -168,6 +184,7 @@
     graphics.enable = true;
 
     nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
       modesetting.enable = true;
       open = true;
       nvidiaSettings = true;

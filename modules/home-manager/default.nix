@@ -9,6 +9,7 @@
     ./mimeapps.nix
     ./zoxide.nix
     ./zsh.nix
+    ./nixvim
   ];
 }
 
