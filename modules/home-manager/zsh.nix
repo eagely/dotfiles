@@ -6,10 +6,11 @@
     shellAliases = {
       ll = "ls -l";
       ".." = "cd ..";
+      vim = "nvim";
       os = "nh os switch";
       hs = "nh home switch";
-      h = "vim ~/dotfiles/home.nix && hs";
-      s = "vim ~/dotfiles/configuration.nix && os";
+      h = "vim ~/dotfiles/home-manager/home.nix && hs";
+      s = "vim ~/dotfiles/nixos/configuration.nix && os";
     };
     initExtra = ''
       bindkey -e
