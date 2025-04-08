@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ ../modules/home-manager inputs.nixvim.homeManagerModules.nixvim ];
+  imports = [ ../modules/home-manager ];
   home.username = "eagely";
   home.homeDirectory = "/home/eagely";
   home.stateVersion = "25.05";

@@ -166,7 +166,7 @@
       kdePackages.okular
       vlc
       brightnessctl
-      geogebra
+      geogebra6
     ];
   };
   fonts = {
