@@ -4,8 +4,6 @@
   wayland.windowManager.sway = {
     enable = true;
     config = rec {
-      modifier = "Mod4";
-      terminal = "kitty";
       fonts = {
         names = [ "Maple Mono" ];
         size = 14.0;
@@ -48,7 +46,7 @@
         "${super}+Return" = "exec kitty";
         "${super}+Up" = "focus up";
         "${super}+a" = "focus parent";
-        "${super}+b" = "splith";
+        "${super}+b" = "exec floorp";
         "${super}+e" = "layout toggle split";
         "${super}+f" = "fullscreen toggle";
         "${super}+h" = "focus left";
