@@ -124,6 +124,27 @@
     shells = with pkgs; [ zsh ];
   
     systemPackages = with pkgs; [
+      # system packages
+      mako
+      wl-clipboard
+      swayfx
+      swaybg
+      vulkan-tools
+      zsh
+      oh-my-zsh
+      home-manager
+      nh
+      pipewire
+      pavucontrol
+      pulseaudio
+      bluez
+      slurp
+      grim
+      xdg-desktop-portal
+      xdg-desktop-portal-wlr
+      kdePackages.xwaylandvideobridge
+
+      # cli utils
       vim
       wget
       curl
@@ -134,38 +155,23 @@
       nettools
       pciutils
       usbutils
-      kitty
-      mako
-      wl-clipboard
-      swayfx
-      swaybg
-      glxinfo
-      vulkan-tools
-      zsh
-      oh-my-zsh
-      thefuck
+      ripgrep
       fastfetch
-      floorp
-      home-manager
-      nh
+      glxinfo
       zoxide
+      brightnessctl
+      eza
+
+      # gui apps
+      kitty
+      floorp
       vesktop
-      pipewire
-      pavucontrol
-      pulseaudio
-      bluez
-      slurp
-      grim
       prismlauncher
       steam
       wofi
-      xdg-desktop-portal
-      xdg-desktop-portal-wlr
-      kdePackages.xwaylandvideobridge
       kdePackages.kdenlive
       kdePackages.okular
       vlc
-      brightnessctl
       geogebra6
     ];
   };
