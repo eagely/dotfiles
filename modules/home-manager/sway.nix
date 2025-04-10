@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   wayland.windowManager.sway = {
     enable = true;
-    config = rec {
+    config = {
       fonts = {
         names = [ "Maple Mono" ];
         size = 14.0;
