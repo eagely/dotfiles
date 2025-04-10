@@ -144,6 +144,15 @@
       xdg-desktop-portal-wlr
       kdePackages.xwaylandvideobridge
 
+      # compilers
+      gcc
+      clang
+      cargo
+      rustc
+      go
+      ghc
+      python3
+
       # cli utils
       vim
       wget
@@ -161,6 +170,8 @@
       zoxide
       brightnessctl
       eza
+      john
+      qbittorrent-nox
 
       # gui apps
       kitty
