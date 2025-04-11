@@ -63,9 +63,12 @@
   };
 
   services = {
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
+    xserver= {
+      videoDrivers = [ "nvidia" ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
     pipewire = {
       enable = true;
@@ -98,12 +101,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-	hardware.nvidia.prime = {
-    sync.enable = true;
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
-	};
-
   environment = {
     variables = {
       XDG_SESSION_TYPE = "wayland";
@@ -130,6 +127,7 @@
       swayfx
       swaybg
       vulkan-tools
+      cudatoolkit
       zsh
       oh-my-zsh
       home-manager
@@ -152,6 +150,8 @@
       go
       ghc
       python3
+      typst
+      tinymist
 
       # cli utils
       vim
@@ -171,7 +171,9 @@
       brightnessctl
       eza
       john
+      hashcat
       qbittorrent-nox
+      tmux
 
       # gui apps
       kitty
@@ -181,11 +183,12 @@
       steam
       wofi
       kdePackages.kdenlive
-      kdePackages.okular
+      evince
       vlc
       geogebra6
     ];
   };
+
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
@@ -195,16 +198,21 @@
     ];
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
-
   hardware = {
     graphics.enable = true;
-
+    opengl = {
+      enable = true;
+    };
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.latest;
       modesetting.enable = true;
       open = true;
       nvidiaSettings = true;
+      prime = {
+        sync.enable = true;
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
     };
     bluetooth = {
       enable = true;
