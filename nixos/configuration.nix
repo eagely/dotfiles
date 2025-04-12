@@ -2,7 +2,7 @@
 
 {
   imports = [
-      ./hardware-configuration.nix
+    ./hardware-configuration.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -81,10 +81,10 @@
         extraConfig ={
           bluetoothEnhancements = {
             "monitor.bluez.properties" = {
-                "bluez5.enable-sbc-xq" = true;
-                "bluez5.enable-msbc" = true;
-                "bluez5.enable-hw-volume" = true;
-                "bluez5.roles" = [ "a2dp_sink" "a2dp_source" ];
+              "bluez5.enable-sbc-xq" = true;
+              "bluez5.enable-msbc" = true;
+              "bluez5.enable-hw-volume" = true;
+              "bluez5.roles" = [ "a2dp_sink" "a2dp_source" ];
             };
           };
         };
@@ -117,9 +117,9 @@
       EDITOR = "vim";
       FLAKE="/home/eagely/dotfiles";
     };
-  
+
     shells = with pkgs; [ zsh ];
-  
+
     systemPackages = with pkgs; [
       # system packages
       mako
@@ -144,6 +144,8 @@
 
       # compilers
       gcc
+      ninja
+      gdb
       clang
       cargo
       rustc
@@ -152,6 +154,17 @@
       python3
       typst
       tinymist
+      nil
+      alejandra
+      pkg-config 
+      qt6.qtbase
+      qt6.qtdeclarative
+      qt6.qttools
+      qt6.qtsvg
+      qt6.qt5compat
+      qt6.qtwayland
+      qt6.qtmultimedia
+      qtcreator
 
       # cli utils
       vim
@@ -174,6 +187,7 @@
       hashcat
       qbittorrent-nox
       tmux
+      exiftool
 
       # gui apps
       kitty
@@ -232,8 +246,6 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
@@ -243,12 +255,5 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
-
+  system.stateVersion = "25.05";
 }

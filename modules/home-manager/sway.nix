@@ -29,6 +29,7 @@
         super = "Mod4";
         hyper = "Mod4+Shift";
       in {
+        "${super}+w" = "exec wofi --show drun --style ${config.home.file."assets/themes/wofi/mocha.css".source}";
         "Print" = "exec sh -c 'grim -g \"$(slurp)\" - | wl-copy'";
         "${super}+0" = "workspace number 10";
         "${super}+1" = "workspace number 1";

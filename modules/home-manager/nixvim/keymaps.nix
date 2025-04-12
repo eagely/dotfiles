@@ -27,21 +27,19 @@
         "<leader>s" = ":w<CR>";
         "<C-s>" = ":w<CR>";
 
-        "<leader>h" = "<C-w>h";
-        "<leader>l" = "<C-w>l";
+        "<leader>l" = ":lua vim.lsp.buf.code_action()<CR>";
+        "<leader>i" = ":lua vim.lsp.buf.format()<CR>";
 
         L = "$";
         H = "^";
 
-        "<C-Up>" = ":resize -2<CR>";
-        "<C-Down>" = ":resize +2<CR>";
-        "<C-Left>" = ":vertical resize +2<CR>";
-        "<C-Right>" = ":vertical resize -2<CR>";
+        "<C-Up>" = ":wincmd k | resize +2<CR>";
+        "<C-Down>" = ":wincmd j | resize -2<CR>";
+        "<C-Left>" = ":wincmd h | vertical resize -2<CR>";
+        "<C-Right>" = ":wincmd l | vertical resize +2<CR>";
 
         "<M-Up>" = ":move-2<CR>";
         "<M-Down>" = ":move+<CR>";
-
-        "<leader>rp" = ":!remi push<CR>";
       };
     visual =
       lib.mapAttrsToList
@@ -50,17 +48,14 @@
         inherit action key;
       })
       {
-        # better indenting
         ">" = ">gv";
         "<" = "<gv";
         "<TAB>" = ">gv";
         "<S-TAB>" = "<gv";
 
-        # move selected line / block of text in visual mode
         "K" = ":m '<-2<CR>gv=gv";
         "J" = ":m '>+1<CR>gv=gv";
 
-        # sort
         "<leader>s" = ":sort<CR>";
       };
     in
