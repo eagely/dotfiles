@@ -13,6 +13,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
@@ -30,7 +35,7 @@
 
       homeConfigurations.eagely = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home-manager/home.nix ];
+        modules = [ ./home-manager/home.nix inputs.catppuccin.homeModules.catppuccin ];
         extraSpecialArgs = { inherit inputs system; };
       };
     };

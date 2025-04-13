@@ -72,6 +72,7 @@
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
+      inter
       maple-mono.NF
       noto-fonts-emoji
       noto-fonts-cjk-sans

@@ -1,6 +1,8 @@
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
-    formattersByFt.nix = [ "alejandra" ];
+    settings = {
+      formatters_by_ft.nix = [ "alejandra" ];
+    };
   };
 }

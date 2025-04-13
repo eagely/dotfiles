@@ -3,9 +3,6 @@
 {
   hardware = {
     graphics.enable = true;
-    opengl = {
-      enable = true;
-    };
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.latest;
       modesetting.enable = true;
