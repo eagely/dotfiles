@@ -26,7 +26,7 @@
       xdg-desktop-portal-wlr
       kdePackages.xwaylandvideobridge
 
-      # compilers
+      # programming related
       gcc
       ninja
       gdb
@@ -41,14 +41,10 @@
       nil
       alejandra
       pkg-config 
-      qt6.qtbase
-      qt6.qtdeclarative
-      qt6.qttools
-      qt6.qtsvg
-      qt6.qt5compat
-      qt6.qtwayland
-      qt6.qtmultimedia
       qtcreator
+      kdePackages.qt6ct
+      qt6.qtsvg
+      papirus-icon-theme
 
       # cli utils
       vim
@@ -62,6 +58,7 @@
       pciutils
       usbutils
       ripgrep
+      fd
       fastfetch
       glxinfo
       zoxide

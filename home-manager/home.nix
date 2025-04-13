@@ -10,5 +10,6 @@
     "assets/themes/wofi/mocha.css".source = ../modules/home-manager/assets/themes/wofi/mocha.css;
   };
   programs.home-manager.enable = true;
+  catppuccin.enable = true;
 }
 

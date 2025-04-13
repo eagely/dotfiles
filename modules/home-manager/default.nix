@@ -2,14 +2,15 @@
 
 {
   imports = [
-    ./kitty.nix
     ./git.nix
+    ./kitty.nix
+    ./mimeapps.nix
+    ./nixvim
     ./ssh.nix
     ./sway.nix
-    ./mimeapps.nix
+    ./theme.nix
     ./zoxide.nix
     ./zsh.nix
-    ./nixvim
   ];
 }
 

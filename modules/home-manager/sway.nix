@@ -5,7 +5,7 @@
     enable = true;
     config = {
       fonts = {
-        names = [ "Maple Mono" ];
+        names = [ "Inter" ];
         size = 14.0;
       };
       gaps = {
