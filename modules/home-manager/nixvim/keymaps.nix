@@ -1,4 +1,5 @@
 { config, lib, ... }:
+
 {
   programs.nixvim = {
     globals = {
@@ -29,6 +30,8 @@
 
         "<leader>l" = ":lua vim.lsp.buf.code_action()<CR>";
         "<leader>i" = ":lua vim.lsp.buf.format()<CR>";
+        "<leader>rn" = ":lua vim.lsp.buf.rename()<CR>";
+        "<leader>gh" = ":lua vim.lsp.buf.hover({ border = 'rounded', max_width = 80, max_height = 30 })<CR>:lua vim.diagnostic.open_float({ border = 'rounded', max_width = 80, header = false })<CR>";
 
         L = "$";
         H = "^";
@@ -60,5 +63,5 @@
       };
     in
       config.lib.nixvim.keymaps.mkKeymaps { options.silent = true; } (normal ++ visual);
-};
-  }
+  };
+}

@@ -33,6 +33,8 @@
       clang
       cargo
       rustc
+      rustfmt
+      rust-analyzer
       go
       ghc
       python3

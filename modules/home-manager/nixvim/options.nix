@@ -42,9 +42,7 @@
 
       textwidth = 0;
 
-      foldlevel = 5;
-      foldmethod = "expr";
-      foldexpr = "nvim_treesitter#foldexpr()";
+      foldenable = false;
     };
   };
 }
