@@ -47,6 +47,9 @@
       kdePackages.qt6ct
       qt6.qtsvg
       papirus-icon-theme
+      qbe
+      gnumake
+      zed-editor
 
       # cli utils
       vim
@@ -71,10 +74,10 @@
       qbittorrent-nox
       tmux
       exiftool
+      xdg-utils
 
       # gui apps
       kitty
-      floorp
       vesktop
       prismlauncher
       steam
@@ -83,6 +86,7 @@
       evince
       vlc
       geogebra6
+      firefox
     ];
   };
 }

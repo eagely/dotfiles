@@ -13,16 +13,6 @@
     rtkit.enable = true;
   };
 
-  systemd.user.services.xdg-desktop-portal = {
-    enable = true;
-    description = "Desktop portal service";
-  };
-
-  systemd.user.services.xdg-desktop-portal-wlr = {
-    enable = true;
-    description = "Wayland desktop portal service";
-  };
-
   time.timeZone = "Europe/Vienna";
 
   i18n.defaultLocale = "en_US.UTF-8";
