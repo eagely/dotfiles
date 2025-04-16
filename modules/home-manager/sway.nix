@@ -47,7 +47,7 @@
         "${super}+Return" = "exec kitty";
         "${super}+Up" = "focus up";
         "${super}+a" = "focus parent";
-        "${super}+b" = "exec floorp";
+        "${super}+b" = "exec firefox";
         "${super}+e" = "layout toggle split";
         "${super}+f" = "fullscreen toggle";
         "${super}+h" = "focus left";
