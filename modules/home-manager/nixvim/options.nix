@@ -18,6 +18,7 @@
       splitbelow = true;
       splitright = true;
 
+      completeopt = "menuone,noselect,noinsert";
       modeline = true;
       modelines = 100;
       undofile = true;

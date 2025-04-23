@@ -13,7 +13,15 @@
         smartGaps = true;
         inner = 10;
       };
-      window.titlebar = false;
+      window = {
+        titlebar = false;
+        commands = [
+          {
+            criteria.app_id = "frontend";
+            command = "floating enable";
+          }
+        ];
+      };
       output = {
         "*" = {
           bg = "${config.home.file."assets/wallpapers/wallpaper.png".source} fill";

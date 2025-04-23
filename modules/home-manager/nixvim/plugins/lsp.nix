@@ -36,6 +36,8 @@
     plugins.lsp = {
       enable = true;
 
+      inlayHints = true;
+
       preConfig = ''
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
           vim.lsp.handlers.hover, {
