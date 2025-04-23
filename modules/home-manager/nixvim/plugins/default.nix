@@ -4,13 +4,13 @@
   imports = [
     ./autopairs.nix
     ./auto-save.nix
+    ./cmp.nix
     ./conform.nix
     ./lsp.nix
     ./lualine.nix
+    ./small.nix
     ./telescope.nix
     ./treesitter.nix
-    ./trouble.nix
-    ./typst.nix
     ./which-key.nix
   ];
   

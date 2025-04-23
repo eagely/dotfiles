@@ -11,6 +11,8 @@
       swayfx
       swaybg
       vulkan-tools
+      libGL
+      libGLU
       cudatoolkit
       zsh
       oh-my-zsh
@@ -50,6 +52,7 @@
       qbe
       gnumake
       zed-editor
+      jdk
 
       # cli utils
       vim
@@ -67,6 +70,7 @@
       fastfetch
       glxinfo
       zoxide
+      starship
       brightnessctl
       eza
       john
@@ -75,6 +79,7 @@
       tmux
       exiftool
       xdg-utils
+      pfetch
 
       # gui apps
       kitty
@@ -87,6 +92,10 @@
       vlc
       geogebra6
       firefox
+      obs-studio
+      github-desktop
+      feh
+      signal-desktop
     ];
   };
 }
