@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 {
   environment = {
@@ -22,8 +22,8 @@
       QT_ENABLE_HIGHDPI_SCALING = "1";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       XDG_CONFIG_HOME = "/home/eagely/.config";
-      XDG_CACHE_HOME  = "/home/eagely/.cache";
-      XDG_DATA_HOME   = "/home/eagely/.local/share";
+      XDG_CACHE_HOME = "/home/eagely/.cache";
+      XDG_DATA_HOME = "/home/eagely/.local/share";
     };
 
     shells = with pkgs; [ zsh ];

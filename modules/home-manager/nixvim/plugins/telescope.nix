@@ -7,7 +7,7 @@
         "<leader>fg" = "live_grep";
         "<leader>fd" = "diagnostics";
       };
-   };
+    };
     extraConfigLua = ''
       require("telescope").setup {
         extensions = {
