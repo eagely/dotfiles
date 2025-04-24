@@ -9,7 +9,6 @@
 
     opts = {
       updatetime = 100;
-
       relativenumber = true;
       number = true;
       hidden = true;
@@ -17,7 +16,6 @@
       mousemodel = "extend";
       splitbelow = true;
       splitright = true;
-
       completeopt = "menuone,noselect,noinsert";
       modeline = true;
       modelines = 100;
@@ -35,14 +33,11 @@
       termguicolors = true;
       spell = true;
       wrap = true;
-
       tabstop = 4;
       shiftwidth = 4;
       expandtab = true;
       autoindent = true;
-
       textwidth = 0;
-
       foldenable = false;
     };
   };

@@ -44,7 +44,7 @@
       tinymist
       nil
       alejandra
-      pkg-config 
+      pkg-config
       qtcreator
       kdePackages.qt6ct
       qt6.qtsvg
