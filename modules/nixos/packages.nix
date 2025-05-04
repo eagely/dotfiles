@@ -33,10 +33,6 @@
       ninja
       gdb
       clang
-      cargo
-      rustc
-      rustfmt
-      rust-analyzer
       go
       ghc
       python3
@@ -53,6 +49,7 @@
       gnumake
       zed-editor
       jdk
+      clippy
 
       # cli utils
       vim
@@ -80,6 +77,9 @@
       exiftool
       xdg-utils
       pfetch
+      ffmpeg
+      cargo-msrv
+      tokei
 
       # gui apps
       kitty
@@ -96,6 +96,10 @@
       github-desktop
       feh
       signal-desktop
+      lunar-client
+      wine
+      winetricks
+      nwg-displays
     ];
   };
 }
