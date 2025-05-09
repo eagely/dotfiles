@@ -2,7 +2,6 @@
 
 {
   nixpkgs.config.allowUnfree = true;
-
   environment = {
     systemPackages = with pkgs; [
       # system packages
@@ -25,7 +24,7 @@
       slurp
       grim
       xdg-desktop-portal
-      xdg-desktop-portal-wlr
+      kdePackages.xdg-desktop-portal-kde
       kdePackages.xwaylandvideobridge
 
       # programming related
@@ -96,10 +95,14 @@
       github-desktop
       feh
       signal-desktop
-      lunar-client
       wine
       winetricks
       nwg-displays
+    ];
+    plasma6.excludePackages = with pkgs.kdePackages; [
+      plasma-browser-integration
+      konsole
+      oxygen
     ];
   };
 }
