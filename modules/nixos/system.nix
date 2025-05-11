@@ -7,6 +7,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   programs.zsh.enable = true;
+  programs.sway.enable = true;
 
   security = {
     polkit.enable = true;
