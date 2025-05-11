@@ -12,7 +12,5 @@
     };
   };
   programs.home-manager.enable = true;
-  catppuccin.enable = true;
 }
-
 
