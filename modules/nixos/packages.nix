@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -91,6 +91,7 @@
       vlc
       geogebra6
       firefox
+      inputs.zen-browser.packages."${system}".specific
       obs-studio
       github-desktop
       feh
