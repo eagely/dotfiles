@@ -79,6 +79,7 @@
       ffmpeg
       cargo-msrv
       tokei
+      steam-run
 
       # gui apps
       kitty
@@ -99,6 +100,10 @@
       wine
       winetricks
       nwg-displays
+      protonvpn-gui
+      qbittorrent
+      unar
+      anki
     ];
     plasma6.excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration
