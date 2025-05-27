@@ -5,7 +5,6 @@
     ./git.nix
     ./kitty.nix
     ./mimeapps.nix
-    ./nixvim
     ./ssh.nix
     ./starship.nix
     ./sway.nix
@@ -13,4 +12,8 @@
     ./zoxide.nix
     ./zsh.nix
   ];
+  xdg.configFile.nvim = {
+    source = ./nvim;
+    recursive = true;
+  };
 }

@@ -80,6 +80,8 @@
       cargo-msrv
       tokei
       steam-run
+      sl
+      neovim
 
       # gui apps
       kitty
