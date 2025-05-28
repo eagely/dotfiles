@@ -1,18 +1,18 @@
 return {
   "saghen/blink.cmp",
   dependencies = {
-    "rafamadriz/friendly-snippets"
+    "rafamadriz/friendly-snippets",
   },
   version = "*",
   opts = {
     completion = {
-      menu = { border = 'rounded' },
+      menu = { border = "rounded" },
       documentation = {
         auto_show = true,
         auto_show_delay_ms = 0,
-        window = { border = 'rounded' }
-      }
+        window = { border = "rounded" },
+      },
     },
-    signature = { enabled = true, window = { border = 'rounded' } },
-  }
+    signature = { enabled = true, window = { border = "rounded" } },
+  },
 }

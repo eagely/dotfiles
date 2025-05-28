@@ -49,6 +49,8 @@
       zed-editor
       jdk
       clippy
+      stylua
+      clang-tools
 
       # cli utils
       vim
