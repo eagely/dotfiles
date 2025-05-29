@@ -1,7 +1,15 @@
 return {
   "nvim-telescope/telescope.nvim",
-  tag = "0.1.8",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-  },
+  dependencies = { "nvim-lua/plenary.nvim" },
+  config = function()
+    require("telescope").setup()
+
+    local map = vim.keymap.set
+    local builtin = require("telescope.builtin")
+
+    map("n", "<leader>ff", builtin.find_files)
+    map("n", "<leader>fg", builtin.live_grep)
+    map("n", "<leader>fb", builtin.buffers)
+    map("n", "<leader>fh", builtin.help_tags)
+  end,
 }
