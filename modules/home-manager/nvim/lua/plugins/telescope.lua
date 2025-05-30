@@ -11,5 +11,6 @@ return {
     map("n", "<leader>fg", builtin.live_grep)
     map("n", "<leader>fb", builtin.buffers)
     map("n", "<leader>fh", builtin.help_tags)
+    map("n", "gr", builtin.lsp_references)
   end,
 }

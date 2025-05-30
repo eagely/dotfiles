@@ -14,5 +14,8 @@ return {
       },
     },
     signature = { enabled = true, window = { border = "rounded" } },
+    keymap = {
+      preset = "enter",
+    },
   },
 }

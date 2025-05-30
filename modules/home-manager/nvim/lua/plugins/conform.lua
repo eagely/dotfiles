@@ -28,4 +28,7 @@ return {
       },
     },
   },
+  keys = {
+    { "<leader>i", function() require("conform").format() end, desc = "Format Buffer" },
+  },
 }
