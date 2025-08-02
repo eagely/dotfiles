@@ -13,7 +13,7 @@
       confirm_os_window_close = 0;
     };
     font = {
-      name = "Maple Mono";
+      name = "Maple Mono NF";
       size = 20;
     };
   };

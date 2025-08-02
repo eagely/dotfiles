@@ -7,8 +7,6 @@
       # system packages
       mako
       wl-clipboard
-      swayfx
-      swaybg
       vulkan-tools
       libGL
       libGLU
@@ -24,7 +22,6 @@
       slurp
       grim
       xdg-desktop-portal
-      kdePackages.xdg-desktop-portal-kde
       kdePackages.xwaylandvideobridge
 
       # programming related
@@ -40,17 +37,14 @@
       nil
       alejandra
       pkg-config
-      qtcreator
-      kdePackages.qt6ct
-      qt6.qtsvg
-      papirus-icon-theme
       qbe
       gnumake
-      zed-editor
       jdk
-      clippy
       stylua
       clang-tools
+      jetbrains.webstorm
+      jetbrains.idea-ultimate
+      nodejs
 
       # cli utils
       vim
@@ -84,6 +78,8 @@
       steam-run
       sl
       neovim
+      github-cli
+      bc
 
       # gui apps
       kitty
@@ -96,9 +92,7 @@
       vlc
       geogebra6
       firefox
-      inputs.zen-browser.packages."${system}".specific
       obs-studio
-      github-desktop
       feh
       signal-desktop
       wine
@@ -108,6 +102,10 @@
       qbittorrent
       unar
       anki
+      discord
+      keymapp
+      gimp
+      telegram-desktop
     ];
     plasma6.excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration

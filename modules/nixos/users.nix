@@ -6,7 +6,7 @@
     users.eagely = {
       isNormalUser = true;
       description = "Artemiy Smirnov";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "plugdev" ];
     };
   };
 }

@@ -2,6 +2,7 @@
 
 {
   hardware = {
+    opengl.driSupport32Bit = true;
     graphics.enable = true;
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.latest;

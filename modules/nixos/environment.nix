@@ -5,6 +5,7 @@
     variables = {
       EDITOR = "vim";
       FLAKE = "/home/eagely/dotfiles";
+      NH_FLAKE = "/home/eagely/dotfiles";
     };
 
     sessionVariables = {

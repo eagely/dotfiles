@@ -15,6 +15,7 @@
     };
     initExtra = ''
       bindkey -e
+      export NH_FLAKE=$FLAKE
     '';
     oh-my-zsh = {
       enable = true;
