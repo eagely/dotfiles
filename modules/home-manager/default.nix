@@ -3,11 +3,11 @@
 {
   imports = [
     ./git.nix
+    ./hyprland.nix
     ./kitty.nix
     ./mimeapps.nix
     ./ssh.nix
     ./starship.nix
-    ./sway.nix
     ./theme.nix
     ./zoxide.nix
     ./zsh.nix

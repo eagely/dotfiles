@@ -11,7 +11,7 @@
     sessionVariables = {
       WRL_NO_HARDWARE_CURSORS = "1";
       WRL_RENDERER_ALLOW_SOFTWARE = "1";
-      XDG_CURRENT_DESKTOP = "sway";
+      XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       __NV_PRIME_RENDER_OFFLOAD = "1";

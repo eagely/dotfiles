@@ -5,6 +5,7 @@
   environment = {
     systemPackages = with pkgs; [
       # system packages
+      hyprland
       mako
       wl-clipboard
       vulkan-tools
