@@ -7,7 +7,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   programs.zsh.enable = true;
-  programs.sway.enable = true;
+  programs.hyprland.enable = true;
   programs.kdeconnect.enable = true;
 
   security = {
