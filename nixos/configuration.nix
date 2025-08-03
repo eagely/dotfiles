@@ -1,7 +1,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../modules/nixos
+    ../nixos
   ];
 
   system.stateVersion = "25.05";
