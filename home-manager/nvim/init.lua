@@ -21,11 +21,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 
+local timer = vim.loop.new_timer()
+timer:start(
+  100,
+  100,
+  vim.schedule_wrap(function()
+    if vim.bo.modified and vim.api.nvim_buf_get_option(0, "buftype") == "" then vim.cmd("silent! write") end
+  end)
+)
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "plugins" }, {
+require("lazy").setup({
   "tpope/vim-sleuth",
   "brenoprata10/nvim-highlight-colors",
+  { import = "plugins" },
 })
 
 require("keymaps")

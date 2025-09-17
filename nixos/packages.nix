@@ -40,7 +40,8 @@
       pkg-config
       qbe
       gnumake
-      jdk
+      jdk24
+      gradle
       stylua
       clang-tools
       jetbrains.webstorm
@@ -81,6 +82,7 @@
       neovim
       github-cli
       bc
+      dioxus-cli
 
       # gui apps
       kitty
@@ -107,6 +109,7 @@
       keymapp
       gimp
       telegram-desktop
+      waydroid
     ];
     plasma6.excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration

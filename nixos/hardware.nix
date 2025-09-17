@@ -2,8 +2,10 @@
 
 {
   hardware = {
-    opengl.driSupport32Bit = true;
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.latest;
       modesetting.enable = true;
