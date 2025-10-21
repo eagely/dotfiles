@@ -2,7 +2,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     settings = {
       "$mod" = "SUPER";
 
@@ -11,6 +10,7 @@
         "eDP-1, disable"
         ", preferred, auto, 1"
       ];
+
       bind =
         let
           mod = "SUPER";
@@ -51,13 +51,14 @@
 
           "${hyper},space,togglefloating"
           "${hyper},c,exec,hyprctl reload"
-          "${hyper},e,exec,swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit hyprland?' -b 'Yes, exit' 'hyprctl dispatch exit'"
+          "${hyper},e,exec,hyprctl dispatch exit"
         ];
 
       workspace = [
         "w[tv1], gapsout:0, gapsin:0"
         "f[1], gapsout:0, gapsin:0"
       ];
+
       windowrule = [
         "bordersize 0, floating:0, onworkspace:w[tv1]"
         "rounding 0, floating:0, onworkspace:w[tv1]"

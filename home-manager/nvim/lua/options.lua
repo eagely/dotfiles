@@ -32,3 +32,10 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.textwidth = 0
 vim.o.foldenable = false
+local orig_floating = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.max_width = 80
+  opts.max_height = 20
+  return orig_floating(contents, syntax, opts, ...)
+end

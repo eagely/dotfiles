@@ -7,7 +7,6 @@
     ./kitty.nix
     ./mimeapps.nix
     ./ssh.nix
-    ./starship.nix
     ./theme.nix
     ./zoxide.nix
     ./zsh.nix

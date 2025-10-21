@@ -7,6 +7,9 @@ map("n", "<C-Left>", "<C-w><Left>", { desc = "Move focus to the left window" })
 map("n", "<C-Right>", "<C-w><Right>", { desc = "Move focus to the right window" })
 map("n", "<C-Down>", "<C-w><Down>", { desc = "Move focus to the lower window" })
 map("n", "<C-Up>", "<C-w><Up>", { desc = "Move focus to the upper window" })
+map("n", "<CR>", "o<Esc>")
+map("n", "<M-CR>", "O<Esc>")
+
 
 map("v", "y", "y$")
 map("v", "<leader>s", "<cmd>w<cr>")

@@ -21,14 +21,29 @@ return {
       lua = { "stylua" },
       c = { "clang-format" },
       rust = { "rustfmt" },
+      typst = { "typstyle", "tinymist" },
+      javascript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
+      json = { "prettier" },
+      yaml = { "prettier" },
+      html = { "prettier" },
+      css = { "prettier" },
+      markdown = { "prettier" },
     },
     formatters = {
       stylua = {
         args = { "--search-parent-directories", "-" },
       },
+      typstyle = {
+        command = "typstyle",
+        args = { "format", "=" },
+        stdin = true,
+      },
     },
   },
   keys = {
-    { "<leader>i", function() require("conform").format() end, desc = "Format Buffer" },
+    { "gq", function() require("conform").format() end, desc = "Format Buffer" },
   },
 }

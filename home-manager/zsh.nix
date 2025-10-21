@@ -13,15 +13,27 @@
       s = "vim ~/dotfiles/nixos/configuration.nix && os";
       p = "vim ~/dotfiles/nixos/packages.nix && os";
     };
-    initExtra = ''
+
+    initContent = ''
       bindkey -e
       export NH_FLAKE=$FLAKE
-      export JAVA_HOME=${pkgs.jdk24}/lib/openjdk
+      export JAVA_HOME=${pkgs.jdk}/lib/openjdk
+
+      autoload -U colors && colors
+
+      git_branch() {
+        branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+        if [ -n "$branch" ]; then
+          echo " $branch"
+        fi
+      }
+
+      PROMPT="%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg_bold[yellow]%}%m %{$fg_bold[green]%}%~%{$fg_bold[magenta]%}\$(git_branch) %{$fg_bold[cyan]%}λ%{$reset_color%} "
     '';
+
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
     };
   };
 }
-

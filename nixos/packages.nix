@@ -6,6 +6,7 @@
     systemPackages = with pkgs; [
       # system packages
       hyprland
+      waybar
       mako
       wl-clipboard
       vulkan-tools
@@ -23,6 +24,8 @@
       slurp
       grim
       xdg-desktop-portal
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
       kdePackages.xwaylandvideobridge
 
       # programming related
@@ -34,19 +37,20 @@
       ghc
       python3
       typst
+      typstyle
       tinymist
       nil
       alejandra
       pkg-config
       qbe
       gnumake
-      jdk24
       gradle
       stylua
       clang-tools
-      jetbrains.webstorm
-      jetbrains.idea-ultimate
       nodejs
+      typescript
+      typescript-language-server
+      pnpm
 
       # cli utils
       vim
@@ -64,7 +68,6 @@
       fastfetch
       glxinfo
       zoxide
-      starship
       brightnessctl
       eza
       john
@@ -83,10 +86,10 @@
       github-cli
       bc
       dioxus-cli
+      wasm-pack
 
       # gui apps
       kitty
-      vesktop
       prismlauncher
       steam
       wofi
@@ -110,6 +113,8 @@
       gimp
       telegram-desktop
       waydroid
+      kdePackages.ark
+      vscodium-fhs
     ];
     plasma6.excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration
