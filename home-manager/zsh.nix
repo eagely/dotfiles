@@ -29,6 +29,18 @@
       }
 
       PROMPT="%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg_bold[yellow]%}%m %{$fg_bold[green]%}%~%{$fg_bold[magenta]%}\$(git_branch) %{$fg_bold[cyan]%}λ%{$reset_color%} "
+
+      murder() {
+        if [ $# -eq 0 ]; then
+          printf 'usage: murder <pattern>\n' >&2
+          return 2
+        fi
+        pattern="$*"
+        ps -ef | awk -v pat="$pattern" 'index($0,pat){print $2}' |
+        while IFS= read -r pid; do
+          kill -9 "$pid" 2>/dev/null || printf 'failed to kill %s\n' "$pid" >&2
+        done
+      }
     '';
 
     oh-my-zsh = {

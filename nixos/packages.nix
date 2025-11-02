@@ -46,6 +46,7 @@
       gnumake
       gradle
       stylua
+      lua-language-server
       clang-tools
       nodejs
       typescript
@@ -87,6 +88,7 @@
       bc
       dioxus-cli
       wasm-pack
+      cht-sh
 
       # gui apps
       kitty

@@ -6,6 +6,7 @@ return {
     "hrsh7th/cmp-path",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
+    "saecki/crates.nvim",
   },
   config = function()
     local cmp = require("cmp")
@@ -22,7 +23,21 @@ return {
         { name = "buffer" },
         { name = "path" },
         { name = "luasnip" },
+        { name = "crates" },
       }),
+      window = {
+        completion = {
+          border = "rounded",
+        },
+        documentation = {
+          auto_show = true,
+          window = { border = "rounded" },
+        },
+      },
+      signature_help = {
+        enabled = true,
+        window = { border = "rounded" },
+      },
     })
   end,
 }

@@ -6,9 +6,8 @@
       "$mod" = "SUPER";
 
       monitor = [
-        "DP-1, 2560x1440@144, 0x0, 1"
+        "HDMI-A-1, 2560x1440@144, 0x0, 1"
         "eDP-1, disable"
-        ", preferred, auto, 1"
       ];
 
       bind =
