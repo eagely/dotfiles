@@ -11,7 +11,7 @@ return {
       float = { border = "rounded" },
     })
 
-    lspconfig.lua_ls.setup({
+    vim.lsp.config("lua_ls", {
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -21,7 +21,7 @@ return {
       },
     })
 
-    lspconfig.tinymist.setup({
+    vim.lsp.config("tinymist", {
       capabilities = capabilities,
       filetypes = { "typst" },
       cmd = { "tinymist" },
@@ -31,7 +31,7 @@ return {
       },
     })
 
-    lspconfig.ts_ls.setup({
+    vim.lsp.config("ts_ls", {
       capabilities = capabilities,
     })
   end,

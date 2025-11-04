@@ -8,7 +8,7 @@
       ".." = "cd ..";
       vim = "nvim";
       os = "nh os switch";
-      hs = "nh home switch";
+      hs = "nh home switch -b backup";
       h = "vim ~/dotfiles/home-manager/home.nix && hs";
       s = "vim ~/dotfiles/nixos/configuration.nix && os";
       p = "vim ~/dotfiles/nixos/packages.nix && os";
@@ -20,6 +20,10 @@
       export JAVA_HOME=${pkgs.jdk}/lib/openjdk
 
       autoload -U colors && colors
+
+      extract() {
+        mv -- "$1"/* . && rmdir -- "$1"
+      }
 
       git_branch() {
         branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)

@@ -3,7 +3,8 @@
 {
   systemd.user.services.xdg-desktop-portal-gtk.enable = true;
   systemd.user.services.xdg-desktop-portal-hyprland.enable = true;
-  xdg.portal = {
+  xdg = {
+  portal = {
     enable = true;
     xdgOpenUsePortal = true;
 
@@ -19,5 +20,6 @@
       "org.freedesktop.impl.portal.OpenURI".default = [ "gtk" ];
       "org.freedesktop.impl.portal.FileChooser".default = [ "gtk" ];
     };
+  };
   };
 }

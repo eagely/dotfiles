@@ -5,9 +5,10 @@
     ./git.nix
     ./hyprland.nix
     ./kitty.nix
-    ./mimeapps.nix
+    ./xdg.nix
     ./ssh.nix
     ./theme.nix
+    ./wallpaper.nix
     ./zoxide.nix
     ./zsh.nix
   ];

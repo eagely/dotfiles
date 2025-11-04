@@ -1,9 +1,20 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, config, ... }:
 
 {
   xdg = {
     enable = true;
 
+      userDirs = {
+        enable = true;
+        desktop = "${config.home.homeDirectory}/mix";
+        documents = "${config.home.homeDirectory}/mix";
+        download = "${config.home.homeDirectory}/downloads";
+        music = "${config.home.homeDirectory}/mix";
+        pictures = "${config.home.homeDirectory}/pictures";
+        publicShare = "${config.home.homeDirectory}/mix";
+        templates = "${config.home.homeDirectory}/mix";
+        videos = "${config.home.homeDirectory}/videos";
+      };
     mimeApps = {
       enable = true;
       defaultApplications = {

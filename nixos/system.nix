@@ -3,12 +3,15 @@
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  boot.kernelModules = [ "binder_linux" "ashmem_linux" ];
+  services.hardware.openrgb.enable = true;
+  boot.kernelModules = [ "amdgpu" "binder_linux" "ashmem_linux" ];
   boot.kernelParams = [
     "androidboot.hardware=waydroid"
   ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.kernelPackages = pkgs.linuxPackages_6_17;
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
   programs.kdeconnect.enable = true;
@@ -36,7 +39,7 @@
 
   services = {
     xserver = {
-      videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "amdgpu" ];
       xkb = {
         layout = "us";
         variant = "";

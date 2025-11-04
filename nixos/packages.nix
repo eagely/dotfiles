@@ -5,6 +5,7 @@
   environment = {
     systemPackages = with pkgs; [
       # system packages
+      openrgb
       hyprland
       waybar
       mako
@@ -27,6 +28,7 @@
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
       kdePackages.xwaylandvideobridge
+      wpaperd
 
       # programming related
       gcc
@@ -52,6 +54,9 @@
       typescript
       typescript-language-server
       pnpm
+      jdk
+      cloudflared
+      wgcf 
 
       # cli utils
       vim

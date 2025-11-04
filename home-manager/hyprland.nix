@@ -5,9 +5,12 @@
     settings = {
       "$mod" = "SUPER";
 
+      exec-once = [
+        "wpaperd -d"
+      ];
+
       monitor = [
-        "HDMI-A-1, 2560x1440@144, 0x0, 1"
-        "eDP-1, disable"
+        "HDMI-A-1, 2560x1440@144.0, 0x0, 1"
       ];
 
       bind =
@@ -24,7 +27,7 @@
         workspaceBinds ++ [
           "${mod},Return,exec,kitty"
           "${mod},b,exec,firefox"
-          "${mod},w,exec,wofi --show drun --style ${config.home.file."assets/themes/wofi/mocha.css".source}"
+          "${mod},w,exec,wofi --show drun --style ${toString /home/eagely/dotfiles/home-manager/mocha.css}"
           ",Print,exec,grim -g \"$(slurp)\" - | wl-copy"
 
           "${mod},f,fullscreen"
