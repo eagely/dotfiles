@@ -10,7 +10,7 @@
       ];
 
       monitor = [
-        "HDMI-A-1, 2560x1440@144.0, 0x0, 1"
+        "DP-3, 2560x1440@144.0, 0x0, 1"
       ];
 
       bind =
@@ -56,6 +56,15 @@
           "${hyper},e,exec,hyprctl dispatch exit"
         ];
 
+      bindm = 
+        let
+          mod = "SUPER";
+          hyper = "SUPER CTRL";
+        in [
+          "${mod}, mouse:272, movewindow"
+          "${mod}, mouse:273, resizewindow"
+        ];
+
       workspace = [
         "w[tv1], gapsout:0, gapsin:0"
         "f[1], gapsout:0, gapsin:0"
@@ -66,6 +75,8 @@
         "rounding 0, floating:0, onworkspace:w[tv1]"
         "bordersize 0, floating:0, onworkspace:f[1]"
         "rounding 0, floating:0, onworkspace:f[1]"
+        "suppressevent maximize, class:.*"
+        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
     };
   };

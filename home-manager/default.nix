@@ -9,6 +9,7 @@
     ./ssh.nix
     ./theme.nix
     ./wallpaper.nix
+    ./waybar.nix
     ./zoxide.nix
     ./zsh.nix
   ];

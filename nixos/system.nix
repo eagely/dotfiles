@@ -3,6 +3,7 @@
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  services.openssh.enable = true;
   services.hardware.openrgb.enable = true;
   boot.kernelModules = [ "amdgpu" "binder_linux" "ashmem_linux" ];
   boot.kernelParams = [

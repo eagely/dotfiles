@@ -9,7 +9,7 @@
         desktop = "${config.home.homeDirectory}/mix";
         documents = "${config.home.homeDirectory}/mix";
         download = "${config.home.homeDirectory}/downloads";
-        music = "${config.home.homeDirectory}/mix";
+        music = "${config.home.homeDirectory}/music";
         pictures = "${config.home.homeDirectory}/pictures";
         publicShare = "${config.home.homeDirectory}/mix";
         templates = "${config.home.homeDirectory}/mix";

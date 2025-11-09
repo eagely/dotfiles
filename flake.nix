@@ -31,7 +31,7 @@
         ({ pkgs, ... }: {
           nixpkgs.overlays = [ fenix.overlays.default ];
           environment.systemPackages = [
-            fenix.packages.${system}.complete.toolchain
+            fenix.packages.${system}.latest.toolchain
             pkgs.rust-analyzer-nightly
           ];
         })

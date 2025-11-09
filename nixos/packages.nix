@@ -29,6 +29,7 @@
       xdg-desktop-portal-gtk
       kdePackages.xwaylandvideobridge
       wpaperd
+      bibata-cursors
 
       # programming related
       gcc
@@ -57,6 +58,8 @@
       jdk
       cloudflared
       wgcf 
+      jq
+      alejandra
 
       # cli utils
       vim
@@ -94,6 +97,7 @@
       dioxus-cli
       wasm-pack
       cht-sh
+      cmus
 
       # gui apps
       kitty
@@ -115,13 +119,12 @@
       qbittorrent
       unar
       anki
-      discord
       keymapp
       gimp
       telegram-desktop
       waydroid
       kdePackages.ark
-      vscodium-fhs
+      vesktop
     ];
     plasma6.excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration
