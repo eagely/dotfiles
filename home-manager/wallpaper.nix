@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   xdg.configFile."wpaperd/config.toml".text = ''
     [default]
     duration = "30m"

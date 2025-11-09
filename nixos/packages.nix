@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
   environment = {
     systemPackages = with pkgs; [
@@ -57,7 +59,7 @@
       pnpm
       jdk
       cloudflared
-      wgcf 
+      wgcf
       jq
       alejandra
 

@@ -1,11 +1,13 @@
-{ config, pkgs, ... }:
-
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  config,
+  pkgs,
+  ...
+}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.openssh.enable = true;
   services.hardware.openrgb.enable = true;
-  boot.kernelModules = [ "amdgpu" "binder_linux" "ashmem_linux" ];
+  boot.kernelModules = ["amdgpu" "binder_linux" "ashmem_linux"];
   boot.kernelParams = [
     "androidboot.hardware=waydroid"
   ];
@@ -40,7 +42,7 @@
 
   services = {
     xserver = {
-      videoDrivers = [ "amdgpu" ];
+      videoDrivers = ["amdgpu"];
       xkb = {
         layout = "us";
         variant = "";
@@ -60,7 +62,7 @@
               "bluez5.enable-sbc-xq" = true;
               "bluez5.enable-msbc" = true;
               "bluez5.enable-hw-volume" = true;
-              "bluez5.roles" = [ "a2dp_sink" "a2dp_source" ];
+              "bluez5.roles" = ["a2dp_sink" "a2dp_source"];
             };
           };
         };
@@ -108,7 +110,7 @@
 
     # Keymapp / Wally Flashing rules for the Moonlander and Planck EZ
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE:="0666", SYMLINK+="stm32_dfu"
-    
+
     # Keymapp Flashing rules for the Voyager
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
   '';

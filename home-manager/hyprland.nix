@@ -1,4 +1,9 @@
-{ inputs, config, pkgs, ... }: {
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -13,18 +18,18 @@
         "DP-3, 2560x1440@144.0, 0x0, 1"
       ];
 
-      bind =
-        let
-          mod = "SUPER";
-          hyper = "SUPER CTRL";
-          workspaceBinds =
-            builtins.concatLists (builtins.genList
-              (n: [
-                "${mod},${toString n},workspace,name:${toString n}"
-                "${hyper},${toString n},movetoworkspace,name:${toString n}"
-              ]) 10);
-        in
-        workspaceBinds ++ [
+      bind = let
+        mod = "SUPER";
+        hyper = "SUPER CTRL";
+        workspaceBinds = builtins.concatLists (builtins.genList
+          (n: [
+            "${mod},${toString n},workspace,name:${toString n}"
+            "${hyper},${toString n},movetoworkspace,name:${toString n}"
+          ])
+          10);
+      in
+        workspaceBinds
+        ++ [
           "${mod},Return,exec,kitty"
           "${mod},b,exec,firefox"
           "${mod},w,exec,wofi --show drun --style ${toString /home/eagely/dotfiles/home-manager/mocha.css}"
@@ -56,14 +61,13 @@
           "${hyper},e,exec,hyprctl dispatch exit"
         ];
 
-      bindm = 
-        let
-          mod = "SUPER";
-          hyper = "SUPER CTRL";
-        in [
-          "${mod}, mouse:272, movewindow"
-          "${mod}, mouse:273, resizewindow"
-        ];
+      bindm = let
+        mod = "SUPER";
+        hyper = "SUPER CTRL";
+      in [
+        "${mod}, mouse:272, movewindow"
+        "${mod}, mouse:273, resizewindow"
+      ];
 
       workspace = [
         "w[tv1], gapsout:0, gapsin:0"

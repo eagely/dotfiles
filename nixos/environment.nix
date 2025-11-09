@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment = {
     variables = {
       EDITOR = "nvim";
@@ -26,6 +24,6 @@
       XDG_DATA_HOME = "/home/eagely/.local/share";
     };
 
-    shells = with pkgs; [ zsh ];
+    shells = with pkgs; [zsh];
   };
 }

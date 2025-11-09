@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   hardware = {
     graphics = {
       enable = true;

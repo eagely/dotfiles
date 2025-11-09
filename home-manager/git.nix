@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   programs.git = {
     enable = true;
     userName = "Artemiy Smirnov";
@@ -18,4 +16,3 @@
     };
   };
 }
-

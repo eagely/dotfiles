@@ -1,7 +1,10 @@
-{ config, pkgs, inputs, ... }:
-
 {
-  imports = [ ../home-manager ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [../home-manager];
   home = {
     username = "eagely";
     homeDirectory = "/home/eagely";
@@ -9,4 +12,3 @@
   };
   programs.home-manager.enable = true;
 }
-
