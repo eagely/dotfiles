@@ -31,7 +31,9 @@
       xdg-desktop-portal-gtk
       kdePackages.xwaylandvideobridge
       wpaperd
+      hyprcursor
       bibata-cursors
+      rose-pine-hyprcursor
 
       # programming related
       gcc

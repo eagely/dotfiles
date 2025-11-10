@@ -17,8 +17,10 @@
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
       QT_ENABLE_HIGHDPI_SCALING = "1";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-      XCURSOR_THEME = "Bibata-Modern-Classic";
-      XCURSOR_SIZE = "24";
+      # XCURSOR_THEME = "Bibata-Modern-Classic";
+      # XCURSOR_SIZE = "24";
+      HYPRCURSOR_THEME = "rose-pine-hyprcursor";
+      HYPRCURSOR_SIZE = "24";
       XDG_CONFIG_HOME = "/home/eagely/.config";
       XDG_CACHE_HOME = "/home/eagely/.cache";
       XDG_DATA_HOME = "/home/eagely/.local/share";

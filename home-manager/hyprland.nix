@@ -32,11 +32,12 @@
         ++ [
           "${mod},Return,exec,kitty"
           "${mod},b,exec,firefox"
-          "${mod},w,exec,wofi --show drun --style ${toString /home/eagely/dotfiles/home-manager/mocha.css}"
+          "${mod},u,exec,vesktop"
+          "${mod},w,exec,wofi  --show drun --style ${./mocha.css}"
           ",Print,exec,grim -g \"$(slurp)\" - | wl-copy"
 
           "${mod},f,fullscreen"
-          "${mod},e,togglefloating"
+          "${mod},space,togglefloating"
           "${mod},q,killactive"
           "${mod},h,movefocus,l"
           "${mod},j,movefocus,d"
@@ -68,6 +69,14 @@
         "${mod}, mouse:272, movewindow"
         "${mod}, mouse:273, resizewindow"
       ];
+
+      decoration = {
+        rounding = 12;
+      };
+
+      general = {
+        border_size = 0;
+      };
 
       workspace = [
         "w[tv1], gapsout:0, gapsin:0"

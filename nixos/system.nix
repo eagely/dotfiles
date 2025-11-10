@@ -7,17 +7,36 @@
 
   services.openssh.enable = true;
   services.hardware.openrgb.enable = true;
-  boot.kernelModules = ["amdgpu" "binder_linux" "ashmem_linux"];
-  boot.kernelParams = [
-    "androidboot.hardware=waydroid"
-  ];
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.kernelPackages = pkgs.linuxPackages_6_17;
-  programs.zsh.enable = true;
-  programs.hyprland.enable = true;
-  programs.kdeconnect.enable = true;
+  services.tailscale.enable = true;
+
+  boot = {
+    kernelModules = ["amdgpu" "binder_linux" "ashmem_linux"];
+    kernelParams = [
+      "androidboot.hardware=waydroid"
+    ];
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    loader.efi.efiSysMountPoint = "/boot";
+    kernelPackages = pkgs.linuxPackages_6_17;
+  };
+
+  programs = {
+    hyprland.enable = true;
+    kdeconnect.enable = true;
+    zsh.enable = true;
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/home/eagely/dotfiles";
+    };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
+  };
 
   security = {
     polkit.enable = true;

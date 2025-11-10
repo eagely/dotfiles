@@ -4,8 +4,7 @@ return {
     local lspconfig = require("lspconfig")
 
     local ok, blink = pcall(require, "blink.cmp")
-    local capabilities = ok and blink.get_lsp_capabilities()
-      or vim.lsp.protocol.make_client_capabilities()
+    local capabilities = ok and blink.get_lsp_capabilities() or vim.lsp.protocol.make_client_capabilities()
 
     vim.diagnostic.config({
       float = { border = "rounded" },
